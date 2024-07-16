@@ -11,6 +11,8 @@
 #
 
 summary: LLVM tests for build/PR gating
+context:
+  compat: llvm18
 adjust:
   - because: "Plan to be ran when either executed locally, or executed by CI system to gate a build or PR."
     when: >-
@@ -51,7 +53,7 @@ discover:
   - name: llvm-tests
     how: fmf
     url: https://src.fedoraproject.org/tests/llvm.git
-    ref: main
+    ref: compat18
 execute:
     how: tmt
 provision:
