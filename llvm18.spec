@@ -93,7 +93,7 @@
 
 Name:		%{pkg_name}
 Version:	%{maj_ver}.%{min_ver}.%{patch_ver}%{?rc_ver:~rc%{rc_ver}}%{?llvm_snapshot_version_suffix:~%{llvm_snapshot_version_suffix}}
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	The Low Level Virtual Machine
 
 License:	Apache-2.0 WITH LLVM-exception OR NCSA
@@ -586,6 +586,9 @@ fi
 
 
 %changelog
+* Tue Jul 16 2024 Timm Bäder <tbaeder@redhat.com> - 18.1.7-3
+- Fix gating configuration to work for compat packages
+
 * Thu Jun 27 2024 Tom Stellard <tstellar@redhat.com> - 18.1.7-2
 - Fix double install of gtest libraries in the compat package
 
